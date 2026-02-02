@@ -915,7 +915,7 @@
 
         async function loadData() {
             try {
-                const response = await fetch('data.json');
+                const response = await fetch('data.json?v=20260202-2');
                 DATA = await response.json();
                 init();
             } catch (e) {
