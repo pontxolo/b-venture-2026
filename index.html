@@ -1087,7 +1087,7 @@
                 return `
                     <article class="project-card" tabindex="0" onclick="openModal(${i})" onkeypress="if(event.key==='Enter')openModal(${i})">
                         <div class="card-header">
-                            ${p.logo && p.logo.startsWith('http') ?
+                            ${p.logo && (p.logo.startsWith('http') || p.logo.startsWith('logos/')) ?
                         `<img class="project-logo" src="${p.logo}" alt="${p.nombre}" onerror="this.outerHTML='<div class=\\'project-logo placeholder\\'>${initials}</div>'">` :
                         `<div class="project-logo placeholder">${initials}</div>`
                     }
